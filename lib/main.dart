@@ -22,7 +22,7 @@ class _IoTSAUFirstState extends State<IoTSAUFirst> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeUI(), //เรียกใช้งานหน้าจอแรกของแอป
+      home: WelcomeUi(), //เรียกใช้งานหน้าจอแรกของแอป
     );
   }
 }

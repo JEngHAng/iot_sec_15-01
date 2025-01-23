@@ -1,17 +1,18 @@
 // ignore_for_file: sort_child_properties_last
 
-import 'dart:ui_web';
 
 import 'package:flutter/material.dart';
+import 'package:project/views/login_ui.dart';
+import 'package:project/views/signup_ui.dart';
 
-class WelcomeUI extends StatefulWidget {
-  const WelcomeUI({super.key});
+class WelcomeUi extends StatefulWidget {
+  const WelcomeUi({super.key});
 
   @override
-  State<WelcomeUI> createState() => _WelcomeUIState();
+  State<WelcomeUi> createState() => _WelcomeUiState();
 }
 
-class _WelcomeUIState extends State<WelcomeUI> {
+class _WelcomeUiState extends State<WelcomeUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +51,15 @@ class _WelcomeUIState extends State<WelcomeUI> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    //เปิดหน้าจอแบบไปกลับได้
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => loginUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "LOGIN",
                     style: TextStyle(
@@ -74,7 +83,14 @@ class _WelcomeUIState extends State<WelcomeUI> {
                   width: MediaQuery.of(context).size.width * 0.035,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => signupUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "SIGNUP",
                     style: TextStyle(

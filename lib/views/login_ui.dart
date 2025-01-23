@@ -1,15 +1,15 @@
 // ignore_for_file: sort_child_properties_last
-
+ 
 import 'package:flutter/material.dart';
-
-class signupUi extends StatefulWidget {
-  const signupUi({super.key});
-
+ 
+class loginUi extends StatefulWidget {
+  const loginUi({super.key});
+ 
   @override
-  State<signupUi> createState() => _signupUiState();
+  State<loginUi> createState() => _loginUiState();
 }
-
-class _signupUiState extends State<signupUi> {
+ 
+class _loginUiState extends State<loginUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +47,7 @@ class _signupUiState extends State<signupUi> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Get On Board!',
+                  'Welcome Back,',
                   style: TextStyle(
                     fontSize: MediaQuery.of(context).size.height * 0.038,
                     fontWeight: FontWeight.bold,
@@ -57,7 +57,7 @@ class _signupUiState extends State<signupUi> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Create your profile to start your Journey.',
+                  'Make it work, make it right, make it fast.',
                   style: TextStyle(
                     fontSize: MediaQuery.of(context).size.height * 0.017,
                     fontWeight: FontWeight.bold,
@@ -66,37 +66,6 @@ class _signupUiState extends State<signupUi> {
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              TextField(
-                keyboardType: TextInputType.name,
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color.fromARGB(255, 110, 109, 109),
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color.fromARGB(255, 110, 109, 109),
-                    ),
-                  ),
-                  prefixIcon: Icon(
-                    Icons.person_2_outlined,
-                    color: Colors.grey[600],
-                  ),
-                  hintText: 'Full Name',
-                  hintStyle: TextStyle(
-                    color: Colors.grey[600],
-                  ),
-                  // isDense: true,
-                  isCollapsed: true,
-                  contentPadding: EdgeInsets.symmetric(
-                    vertical: 25.0,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
               ),
               TextField(
                 keyboardType: TextInputType.emailAddress,
@@ -112,41 +81,10 @@ class _signupUiState extends State<signupUi> {
                     ),
                   ),
                   prefixIcon: Icon(
-                    Icons.email_outlined,
+                    Icons.person_2_outlined,
                     color: Colors.grey[600],
                   ),
                   hintText: 'E-Mail',
-                  hintStyle: TextStyle(
-                    color: Colors.grey[600],
-                  ),
-                  // isDense: true,
-                  isCollapsed: true,
-                  contentPadding: EdgeInsets.symmetric(
-                    vertical: 25.0,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              TextField(
-                keyboardType: TextInputType.phone,
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color.fromARGB(255, 110, 109, 109),
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color.fromARGB(255, 110, 109, 109),
-                    ),
-                  ),
-                  prefixIcon: Icon(
-                    Icons.numbers,
-                    color: Colors.grey[600],
-                  ),
-                  hintText: 'Phone No',
                   hintStyle: TextStyle(
                     color: Colors.grey[600],
                   ),
@@ -195,10 +133,26 @@ class _signupUiState extends State<signupUi> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Forget Password?',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.015,
+              ),
               ElevatedButton(
                 onPressed: () {},
                 child: Text(
-                  'SIGNUP',
+                  'LOGIN',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -236,7 +190,7 @@ class _signupUiState extends State<signupUi> {
                       height: 20.0,
                     ),
                     Text(
-                      '  SIGN-IN WITH GOOGLE',
+                      '  Sign-in with Google',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
@@ -263,12 +217,12 @@ class _signupUiState extends State<signupUi> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Already have on Account?',
+                    'Don\'t have an account?',
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
-                      'LOGIN',
+                      'Signup',
                       style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
